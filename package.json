@@ -19,5 +19,8 @@
   "homepage": "https://github.com/eliezer-castro/test-ui-cypress#readme",
   "devDependencies": {
     "cypress": "^12.3.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
