@@ -14,7 +14,7 @@ describe("Funcionalidades pagina de produtos", () => {
     .click();
   });
 
-  it.only('Deve adicionar um produto ao carrinho', ()=>{
+  it('Deve adicionar um produto ao carrinho', ()=>{
 
     const qtdProduto = 5;
 
@@ -29,4 +29,8 @@ describe("Funcionalidades pagina de produtos", () => {
     cy.get('.dropdown-toggle > .mini-cart-items').should('contain', qtdProduto)
     cy.get('.woocommerce-message').should('contain', 'foram adicionados no seu carrinho.')
   })
+
+  it.only('Deve adicionar produtos ao carrinho - Usando Comando Customizado', () => {
+      cy.addProduto("Ajax Full-Zip Sweatshirt", "XL", "Red", 3)
+  });
 });
